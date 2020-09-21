@@ -1,6 +1,6 @@
 const User = require('../models/user');
 const Blog = require('../models/blog');
-const shortId = require('shortId');
+const shortId = require('shortid');
 const jwt = require('jsonwebtoken');
 const expressJwt = require('express-jwt');
 const { errorHandler } = require('../helpers/dbErrorHandler');
