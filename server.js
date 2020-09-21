@@ -54,10 +54,10 @@ if(process.env.NODE_ENV == 'production'){
     //set static folder
     //app.use(express.static('frontend/build'));
     
-    app.use(express.static(path.join(__dirname, 'frontend/out')));
+    app.use(express.static(path.join(__dirname, 'frontend/.next/server/pages')));
 
     app.get('*', (req,res)=>{
-        res.sendFile(path.resolve(__dirname,'frontend','out','index.html'));
+        res.sendFile(path.resolve(__dirname,'frontend','.next','server','pages','index.html'));
     });
 }
 const port = process.env.PORT || 8000;
